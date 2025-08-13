@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Compass - Your Online Travel Guide</title>
-   <link rel="stylesheet" href="Assets/CSS/Styles.css">
-   <link rel="stylesheet" href="Assets/CSS/Responsive.css">
+   <link rel="stylesheet" href="Assets/css/nav.css">
+   <link rel="stylesheet" href="Assets/css/styles.css">
+   <link rel="stylesheet" href="Assets/css/responsive.css">
 </head>
 <body>
-   <!-- Header -->
-   <header>
-      <div class="top">
-         <div class="logo">
-            <img src="Assets/img/Adobe Express - file.png" alt="Compass Logo">
-            <h1>Compass</h1>
-         </div>
-         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="#বাংলাদেশ">বাংলাদেশ</a>
-            <a href="#বিদেশ">বিদেশ</a>
-            <a href="#ভ্রমণ গল্প">ভ্রমণ গল্প</a>
-            <a href="#ভ্রমণ গাইড">ভ্রমণ গাইড</a>
-            <a href="#ফোন ডিরেক্টরি">ফোন ডিরেক্টরি</a>
-            <a href="contact.html">Contact</a>
-         </nav>
-      </div>
-   </header>
+
+<!-- NAV PLACEHOLDER -->
+<div id="nav-placeholder"></div>
+
+<!-- Hero Section -->
+<section class="hero">
+   <div class="hero-content">
+      <h1>Welcome to Compass</h1>
+      <p>বাংলাদেশ ও বিদেশের ভ্রমণ গল্প, গাইড, ও ফোন ডিরেক্টরি</p>
+      <a href="#বাংলাদেশ" class="btn-primary">শুরু করুন</a>
+   </div>
+</section>
+
+<script>
+   // Load nav.html dynamically
+   fetch("Assets/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+         document.getElementById("nav-placeholder").innerHTML = data;
+
+         // Attach mobile menu toggle after nav loads
+         document.getElementById("menuToggle").addEventListener("click", function () {
+            document.getElementById("navbar").classList.toggle("show");
+         });
+      });
+</script>
+
+<script src="main.js"></script>
 
    <!-- Hero Section -->
    <section class="hero">
