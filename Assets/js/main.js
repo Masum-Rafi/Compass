@@ -58,3 +58,24 @@ document.addEventListener("input", function (e) {
   }
 });
 
+// Data fetch
+
+  document.addEventListener("DOMContentLoaded", () => {
+  fetch("http://localhost:3000/api/destinations")
+    .then(res => res.json())
+    .then(data => {
+      const destContainer = document.getElementById("popular-destinations");
+      destContainer.innerHTML = "";
+      data.forEach(dest => {
+        destContainer.innerHTML += `
+          <div class="dest-card">
+            <img src="${dest.img}" alt="${dest.name}">
+            <h3>${dest.name}</h3>
+            <p>${dest.desc}</p>
+          </div>
+        `;
+      });
+    })
+    .catch(err => console.error("Error fetching destinations:", err));
+});
+
