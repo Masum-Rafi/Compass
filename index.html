@@ -18,7 +18,10 @@
    <div class="hero-content">
       <h1>Welcome to Compass</h1>
       <p>বাংলাদেশ ও বিদেশের ভ্রমণ গল্প, গাইড, ও ফোন ডিরেক্টরি</p>
-      <a href="#বাংলাদেশ" class="btn-primary">শুরু করুন</a>
+      <div class="search-bar">
+            <input type="search" placeholder="অনুসন্ধান করুন">
+            <button>খুঁজুন</button>
+      </div>
    </div>
 </section>
 
@@ -36,40 +39,18 @@
       });
 </script>
 
-<script src="main.js"></script>
-
-   <!-- Hero Section -->
-   <section class="hero">
-      <div class="overlay">
-         <h2>Explore the World with Compass</h2>
-         <p>Your trusted guide to Bangladesh & beyond</p>
-         <div class="search-bar">
-            <input type="search" placeholder="Search destinations, guides, or stories">
-            <button>খুঁজুন</button>
-         </div>
-      </div>
-   </section>
+<script src="/Assets/js/main.js"></script>
 
    <!-- Popular Destinations -->
-   <section class="section">
-      <h2>Popular Destinations</h2>
-      <div class="cards">
-         <div class="card">
-            <img src="img/dhaka.jpg" alt="Dhaka">
-            <h3>Dhaka</h3>
-         </div>
-         <div class="card">
-            <img src="img/coxsbazar.jpg" alt="Cox's Bazar">
-            <h3>Cox's Bazar</h3>
-         </div>
-         <div class="card">
-            <img src="img/sundarban.jpg" alt="Sundarban">
-            <h3>Sundarban</h3>
-         </div>
-      </div>
-   </section>
+<section class="popular">
+  <h2>Popular Destinations</h2>
+  <div id="popular-destinations" class="dest-grid"></div>
+</section>
 
-   <!-- Travel Guides -->
+<script src="/Assets/js/main.js"></script>
+
+
+<!-- Travel Guides -->
    <section class="section guides">
       <h2>Travel Guides</h2>
       <div class="cards">
